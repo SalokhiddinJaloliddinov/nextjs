@@ -7,7 +7,7 @@ type Person = {
 const Persons: NextPage<Person> = ({ id }) => {
   return (
     <div>
-      Person id: {id}
+      Persons id: {id}
     </div>
   );
 };
