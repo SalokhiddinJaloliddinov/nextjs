@@ -1,5 +1,4 @@
 import { GetServerSidePropsContext, NextPage } from 'next';
-import Header from '../../src/components/navigations/header/Header';
 
 type Person = {
   id: number;
