@@ -1,15 +1,15 @@
-import React from 'react';
-import { UserAvatar } from 'components/avatars/UserAvatar';
+import React from "react";
+import { UserAvatar } from "src/components/avatars/UserAvatar";
 import {
   BellIcon,
   FullScreenIcon,
-  GlobusIcon,
+  GlobeIcon,
   MailIcon,
   MoonIcon,
   SettingsIcon,
-} from 'components/icons';
+} from "src/components/icons";
 
-import styles from './Navigations.module.scss';
+import styles from "./Navigations.module.scss";
 
 interface NavigationType {
   href: string;
@@ -18,31 +18,31 @@ interface NavigationType {
 
 const navigation = [
   {
-    path: '',
-    icon: GlobusIcon,
+    path: "",
+    icon: GlobeIcon,
   },
   {
-    path: '',
+    path: "",
     icon: MoonIcon,
   },
   {
-    path: '',
+    path: "",
     icon: MailIcon,
   },
   {
-    path: '',
+    path: "",
     icon: BellIcon,
   },
   {
-    path: '',
+    path: "",
     icon: FullScreenIcon,
   },
   {
-    path: '',
+    path: "",
     icon: UserAvatar,
   },
   {
-    path: '',
+    path: "",
     icon: SettingsIcon,
   },
 ];

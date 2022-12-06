@@ -1,18 +1,23 @@
-import React from 'react';
-import Logo from '../../logos/Logo';
+import React from "react";
+import Logo from "../../logos/Logo";
 
-import styles from './LoginPage.module.scss';
+import styles from "./LoginPage.module.scss";
+import { SdLogo } from "../../logos/SdLogo";
+import LoginLogo from "../../logos/LoginLogo";
+import AnorLogo from "../../logos/AnorLogo";
 
 interface LoginPageLayoutProps {
   children?: JSX.Element | JSX.Element[];
 }
 
-export const LoginPageLayout: React.FC<LoginPageLayoutProps> = ({ children }) => {
+export const LoginPageLayout: React.FC<LoginPageLayoutProps> = ({
+  children,
+}) => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
         <div className={styles.card}>
-          <Logo />
+          <AnorLogo />
           <h2>Добро пожаловать!</h2>
           <h6>Войдите, чтобы продолжить</h6>
           <div className={styles.form}>{children}</div>

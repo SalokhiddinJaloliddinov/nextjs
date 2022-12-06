@@ -1,17 +1,19 @@
-import React from 'react';
-import Search from 'components/inputs/Search';
-import Logo from 'components/logos/Logo';
-import NavItems from './NavItems';
+import React from "react";
+import Search from "src/components/inputs/Search";
+import Logo from "src/components/logos/Logo";
+import NavItems from "./NavItems";
+import { SdLogo } from "src/components/logos/SdLogo";
+import Container from "src/components/layout/Container";
 
 // styles
-import styles from './Navigations.module.scss';
-import { SdLogo } from '../../logos/SdLogo';
+import styles from "./Navigations.module.scss";
+import variables from "styles/variables.module.scss";
 
 export const Navbar = () => {
   return (
-    <div className={styles.container}>
+    <Container>
       <div className={styles.header_left}>
-        <SdLogo />
+        <SdLogo color={variables.primaryColor} />
         <Search />
       </div>
       <div className={styles.header_right}>
@@ -21,6 +23,6 @@ export const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Container>
   );
 };

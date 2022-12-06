@@ -1,0 +1,98 @@
+@use 'styles/variables.module';
+
+$icon_block_size: 40px;
+
+.table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  //background-color: #7b8191;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 7px rgb(154 154 204 / 10%);
+  //outline: 1px solid sienna;
+  min-width: 24%;
+  background: variables.$white;
+  border-radius: 5px;
+  margin-right: 1%;
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+
+    h6 {
+      font-size: 12px;
+      text-transform: uppercase;
+      opacity: .4;
+    }
+  }
+
+  &__secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+  }
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+
+  h4 {
+    font-size: 26px;
+  }
+}
+
+.icon_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: variables.$primary-color;
+  width: $icon_block_size;
+  height: $icon_block_size;
+  border-radius: 5px;
+
+  &__primary {
+    @extend .icon_block;
+    background: linear-gradient(to right, variables.$primary-color 0%, variables.$primary-bg-hover 100%);
+  }
+
+  &__red {
+    @extend .icon_block;
+    background: linear-gradient(to right, variables.$secondary-color 0%, variables.$secondary-bg-hover 100%);
+  }
+
+  &__green {
+    @extend .icon_block;
+    background: linear-gradient(to right, variables.$success-color 0%, variables.$success-bg-hover 100%);
+  }
+
+  &__yellow {
+    @extend .icon_block;
+    background: linear-gradient(to right, variables.$warning-color 0%, variables.$warning-bg-hover 100%);
+  }
+}
+
+.diff {
+  margin: 0;
+  font-size: 12px;
+  &__data {
+    font-family: monospace;
+    color: variables.$secondary-color;
+  }
+}

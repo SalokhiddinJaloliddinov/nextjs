@@ -1,4 +1,4 @@
-$primary: '#5fbcd3ff';
+@use 'styles/variables.module';
 
 .sticky {
   width: 100%;
@@ -10,7 +10,7 @@ $primary: '#5fbcd3ff';
   margin: 0 auto;
   z-index: 999 !important;
   box-shadow: 0px 8px 14.72px 1.28px rgb(154 154 204 / 10%);
-  background-color: white;
+  background-color: variables.$white;
 }
 
 .main_menu {
@@ -39,16 +39,24 @@ $primary: '#5fbcd3ff';
     color: #7b8191;
     padding: 17px 13px !important;
     font-size: 14px;
-    background-color: #fff;
+    background-color: variables.$white;
     border-radius: 0;
     white-space: nowrap;
     cursor: pointer;
     font-family: 'Montserrat';
     font-weight: 500;
+
     &__active {
       @extend .menu__item;
-      border-bottom: 3px solid #00aad4ff;
+      border-bottom: 3px solid variables.$primary-color;
       color: #333239;
+    }
+
+    &:not(&__active):hover {
+      color: variables.$primary-color;
+      svg {
+        fill: variables.$primary-color;
+      }
     }
 
     svg:nth-child(1) {
@@ -66,7 +74,6 @@ $primary: '#5fbcd3ff';
     font-size: 14px;
     line-height: 1;
     vertical-align: middle;
-    // color: #4a4a69 !important;
     white-space: nowrap;
     -webkit-box-flex: 1;
     flex: 1 1 auto;

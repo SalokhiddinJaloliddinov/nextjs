@@ -1,7 +1,13 @@
+@use 'styles/variables.module';
+
 .page {
   width: 100%;
   height: 100vh;
-  background-color: #37cab3;
+  background-color: rgba(66, 66, 66, 0.06);
+}
+
+.logo {
+  text-align: center;
 }
 
 .container {
@@ -17,10 +23,11 @@
   width: 40%;
   padding: 50px;
   border-radius: 15px;
-  background-color: #fff;
+  background-color: variables.$white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
 
   h2 {
-    color: #37cab3;
+    color: variables.$primary-color;
   }
 
   svg {
@@ -40,7 +47,7 @@
     font-weight: bold;
 
     &:hover {
-      color: #37cab3;
+      color: variables.$primary-bg-hover;
     }
   }
 }

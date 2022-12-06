@@ -1,23 +1,41 @@
-import React from 'react';
-import { HomeIcon, NavigatorIcon } from 'components/icons';
-import ArrowDropdownIcon from '../../icons/ArrowDropdownIcon';
+import React from "react";
+import {
+  HomeIcon,
+  NavigatorIcon,
+  ArrowDropdownIcon,
+  UserIcon,
+  BankIcon,
+} from "src/components/icons";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 //styles
-import styles from './Menu.module.scss';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import styles from "./Menu.module.scss";
+import variables from "styles/variables.module.scss";
 
 const menu_items = [
   {
-    text: 'Дашборд',
+    text: "Dashboard",
     icon: HomeIcon,
-    path: '/test',
+    path: "/",
     drop: false,
   },
   {
-    text: 'Test',
+    text: "Расположения",
     icon: NavigatorIcon,
-    path: '/',
+    path: "/test",
+    drop: false,
+  },
+  {
+    text: "Пользователи",
+    icon: UserIcon,
+    path: "/users",
+    drop: false,
+  },
+  {
+    text: "Банк",
+    icon: BankIcon,
+    path: "/bank",
     drop: true,
   },
 ];
@@ -34,15 +52,26 @@ const Menu = () => {
               <li className={styles.slide} key={id}>
                 <Link
                   className={
-                    router.asPath === obj.path ? styles.menu__item__active : styles.menu__item
+                    router.asPath === obj.path
+                      ? styles.menu__item__active
+                      : styles.menu__item
                   }
-                  href={obj.path}>
+                  href={obj.path}
+                >
                   <obj.icon
-                    color={router.asPath === obj.path ? '#00aad4ff' : '#4a4a69 '}
+                    color={
+                      router.asPath === obj.path
+                        ? variables.primaryColor
+                        : "#4a4a69 "
+                    }
                     size={20}
                   />
                   <span className={styles.menu__label}>{obj.text}</span>
-                  {obj.drop ? <ArrowDropdownIcon size={15} color={'#9ca2a9'} /> : ''}
+                  {obj.drop ? (
+                    <ArrowDropdownIcon size={15} color={"#9ca2a9"} />
+                  ) : (
+                    ""
+                  )}
                 </Link>
               </li>
             ))}

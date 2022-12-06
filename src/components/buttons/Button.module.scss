@@ -1,5 +1,7 @@
+@use 'styles/variables.module';
+
 .primary {
-  background-color: #37cab3;
+  background-color: variables.$primary-color;
   cursor: pointer;
   width: 100%;
   color: #fff;
@@ -11,6 +13,6 @@
   transition: 0.2s ease-in-out background;
 
   &:hover {
-    background-color: #5cd3b9;
+    background-color: variables.$primary-bg-hover;
   }
 }
