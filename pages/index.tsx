@@ -1,17 +1,5 @@
-import { MainLayout } from "../src/components/layout/MainLayout";
-import { Meta } from "../src/components/meta";
-import CountTicket from "../src/components/widgets/count/CountTicket";
-import Container from "src/components/layout/Container";
+import MainHeader from "../src/components/layout/header";
 
 export default function Home() {
-  return (
-    <MainLayout>
-      <Meta title="Сервис Деск" />
-      <Container>
-        <>
-          <CountTicket />
-        </>
-      </Container>
-    </MainLayout>
-  );
+  return <MainHeader />;
 }

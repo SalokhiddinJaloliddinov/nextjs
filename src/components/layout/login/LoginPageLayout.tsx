@@ -1,9 +1,6 @@
 import React from "react";
-import Logo from "../../logos/Logo";
 
 import styles from "./LoginPage.module.scss";
-import { SdLogo } from "../../logos/SdLogo";
-import LoginLogo from "../../logos/LoginLogo";
 import AnorLogo from "../../logos/AnorLogo";
 
 interface LoginPageLayoutProps {

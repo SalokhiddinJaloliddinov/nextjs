@@ -21,7 +21,7 @@ const CountCard: React.FC<CountCardType> = ({ data, diff, final_class }) => {
           <div className={styles.stats}>
             <h4>{data}</h4>
             <p className={styles.diff}>
-              Last week
+              Прошлая неделя
               <ArrowDropdownIcon size={12} />
               <span className={styles.diff__data}>{diff}</span>
             </p>

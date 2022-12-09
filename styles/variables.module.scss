@@ -1,4 +1,4 @@
-$primary-color: #0094d4;
+$primary-color: #000000;
 $primary-bg-hover: rgba($primary_color, 58%);
 $white: #fff;
 $body-bg-color: #eaf3f147;
@@ -11,6 +11,8 @@ $success-bg-hover: rgba($success-color, 58%);
 
 $warning-color: #ffbd5a;
 $warning-bg-hover: rgba($warning-color, 58%);
+
+$danger-color: #f34343;
 
 :export {
   primaryColor: $primary-color;

@@ -1,18 +1,32 @@
-@use 'styles/variables.module';
+.button {
+  @apply py-2 px-3 transition-colors rounded-md font-medium text-sm;
+}
+
+.primary, .secondary, .warning, .success, .danger, .info {
+  @extend .button;
+}
 
 .primary {
-  background-color: variables.$primary-color;
-  cursor: pointer;
-  width: 100%;
-  color: #fff;
-  font-weight: 500;
-  text-align: center;
-  border: 1px solid transparent;
-  padding: 9px 12px;
-  border-radius: 5px;
-  transition: 0.2s ease-in-out background;
-
-  &:hover {
-    background-color: variables.$primary-bg-hover;
-  }
+  @apply bg-primary-base text-white hover:bg-primary-hover;
 }
+
+.secondary {
+  @apply bg-secondary-base text-white hover:bg-secondary-hover;
+}
+
+.warning {
+  @apply bg-yellow-100 text-yellow-600 hover:bg-amber-100;
+}
+
+.success {
+  @apply bg-green-100 text-green-800 hover:bg-green-200;
+}
+
+.danger {
+  @apply bg-red-100 text-red-800 hover:bg-red-200;
+}
+
+.info {
+  @apply bg-blue-100 text-blue-800 hover:bg-blue-200 focus:ring-2 focus:ring-offset-2 border-transparent shadow-sm focus:outline-none focus:ring-blue-300;
+}
+

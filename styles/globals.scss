@@ -1,8 +1,23 @@
 @use 'styles/variables.module';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @mixin headings {
   line-height: 1.2;
   margin: 0 0 8px 0;
+}
+
+:root {
+  --primary: 3,148,212;
+  --primary-hover: rgba(var(--primary), 0.8);
+  --white: #fff;
+  --secondary: rgb(247, 79, 117);
+  --secondary-hover: rgb(243 52 97);
+  --warning: #ffbd5a;
+  --warning-hove: #f8ab37;
+  --danger: #f34343;
+  --danger-hover: #f34343;
 }
 
 html,

@@ -35,3 +35,15 @@
     color: #a7aab3;
   }
 }
+
+.bg {
+  background-color: red !important;
+}
+
+.primary {
+  background-color: variables.$primary-color;
+
+  &__hover {
+    background-color: variables.$primary-bg-hover;
+  }
+}

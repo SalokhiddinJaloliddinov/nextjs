@@ -7,7 +7,7 @@ $icon_block_size: 40px;
   display: flex;
   justify-content: center;
   margin-top: 20px;
-  //background-color: #7b8191;
+  //background-color: #24d5b8;
 }
 
 .card {
@@ -70,27 +70,40 @@ $icon_block_size: 40px;
   &__primary {
     @extend .icon_block;
     background: linear-gradient(to right, variables.$primary-color 0%, variables.$primary-bg-hover 100%);
+    box-shadow: 0 5px 10px rgba(variables.$primary-color, 40%)
   }
 
-  &__red {
+  &__secondary {
     @extend .icon_block;
     background: linear-gradient(to right, variables.$secondary-color 0%, variables.$secondary-bg-hover 100%);
+    box-shadow: 0 5px 10px rgba(variables.$secondary-color, 40%)
+
   }
 
-  &__green {
+  &__success {
     @extend .icon_block;
     background: linear-gradient(to right, variables.$success-color 0%, variables.$success-bg-hover 100%);
+    box-shadow: 0 5px 10px lighten(variables.$success-color, 40%);
   }
 
-  &__yellow {
+  &__warning {
     @extend .icon_block;
     background: linear-gradient(to right, variables.$warning-color 0%, variables.$warning-bg-hover 100%);
+    box-shadow: 0 5px 10px rgba(variables.$warning-color, 40%)
   }
 }
 
 .diff {
   margin: 0;
   font-size: 12px;
+  display: flex;
+
+  svg {
+    background-color: variables.$danger-color;
+    border-radius: 50%;
+    fill: white;
+    margin: 0 8px;
+  }
   &__data {
     font-family: monospace;
     color: variables.$secondary-color;

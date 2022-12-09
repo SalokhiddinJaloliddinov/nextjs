@@ -13,13 +13,13 @@ export function getCountIcon(final_class: string | TicketClasses) {
   switch (final_class) {
     case "DevelopmentRequest":
       return (
-        <div className={count.icon_block__red}>
+        <div className={count.icon_block__secondary}>
           <BracesIcon size={20} color={variables.whiteColor} />
         </div>
       );
     case "Incident":
       return (
-        <div className={count.icon_block__yellow}>
+        <div className={count.icon_block__warning}>
           <IncidentIcon size={20} color={variables.whiteColor} />
         </div>
       );
@@ -31,7 +31,7 @@ export function getCountIcon(final_class: string | TicketClasses) {
       );
     case "DeliveryRequest":
       return (
-        <div className={count.icon_block__green}>
+        <div className={count.icon_block__success}>
           <TruckIcon size={20} color={variables.whiteColor} />
         </div>
       );

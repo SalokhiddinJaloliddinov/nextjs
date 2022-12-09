@@ -1,30 +1,16 @@
-import { NextPage } from 'next';
-import React from 'react';
+import { NextPage } from "next";
+import React from "react";
+import { MainLayout } from "src/components/layout/MainLayout";
+import Container from "src/components/layout/Container";
+import { Button } from "../../src/components/buttons/Button";
 
 const Person: NextPage = () => {
   return (
-    <div>
-      Hello world
-      <p>scoped!</p>
-      <style jsx>{`
-        p {
-          color: blue;
-        }
-        div {
-          background: red;
-        }
-        @media (max-width: 600px) {
-          div {
-            background: blue;
-          }
-        }
-      `}</style>
-      <style global jsx>{`
-        body {
-          background: white;
-        }
-      `}</style>
-    </div>
+    <MainLayout>
+      <Container>
+        <Button type={"primary"}>Кнопка</Button>
+      </Container>
+    </MainLayout>
   );
 };
 
