@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { IconType } from '../../utils/types/icons';
 
-const NavigatorIcon: React.FC<IconType> = ({ size, color }) => (
+const NavigatorIcon: React.FC<IconType> = ({ size, color, className }) => (
   <svg
-    className="header-icon-svgs"
+    className={className}
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 24 24"
     width={size ? size : 24}

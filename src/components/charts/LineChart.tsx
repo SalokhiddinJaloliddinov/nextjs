@@ -1,14 +1,15 @@
-import React, { useEffect, useState } from "react";
-import Chart from "react-apexcharts";
-import { ApexOptions } from "apexcharts";
+import React, { useEffect, useState } from 'react';
+import Chart from 'react-apexcharts';
+import { ApexOptions } from 'apexcharts';
+import { ChartProps } from 'src/utils/types';
 
-const LineChart = () => {
+const LineChart: React.FC<ChartProps> = ({ type }) => {
   const [averageTemp, setAverageTemp] = useState([]);
   const [date, setDate] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
-      const url = "http://localhost:3000/api/hello";
+      const url = 'http://localhost:3000/api/hello';
       try {
         const response = await fetch(url);
         const { temperature } = await response.json();
@@ -24,14 +25,14 @@ const LineChart = () => {
   const series = [
     //data on the y-axis
     {
-      name: "Temperature in Celsius",
+      name: 'Temperature in Celsius',
       data: averageTemp,
     },
   ];
   const options: ApexOptions = {
     //data on the x-axis
     chart: {
-      id: "bar-chart",
+      id: 'bar-chart',
       brush: {
         enabled: false,
         target: undefined,
@@ -42,7 +43,7 @@ const LineChart = () => {
       },
       animations: {
         enabled: true,
-        easing: "easeinout",
+        easing: 'easeinout',
         speed: 800,
         animateGradually: {
           enabled: false,
@@ -55,19 +56,19 @@ const LineChart = () => {
       },
     },
     stroke: {
-      curve: "smooth",
+      curve: 'smooth',
     },
     markers: {
       size: 0,
     },
-    colors: ["#734CEA"],
+    colors: ['#222'],
     // xaxis: {
     //   categories: date,
     // },
   };
   return (
     <div>
-      <Chart options={options} series={series} type="area" width="450" />
+      <Chart options={options} series={series} type={type} width="450" />
     </div>
   );
 };

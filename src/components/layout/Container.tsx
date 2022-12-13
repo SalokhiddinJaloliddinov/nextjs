@@ -1,12 +1,13 @@
-import React from "react";
-import styles from "./Container.module.scss";
+import React from 'react';
+import styles from './Container.module.scss';
 
 type ContainerProps = {
   children: JSX.Element | JSX.Element[];
+  className?: string;
 };
 
-const Container: React.FC<ContainerProps> = ({ children }) => {
-  return <div className={styles.container}>{children}</div>;
+const Container: React.FC<ContainerProps> = ({ children, className }) => {
+  return <div className={`lg:px-32 ${className}`}>{children}</div>;
 };
 
 export default Container;

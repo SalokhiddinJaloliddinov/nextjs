@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { IconType } from '../../utils/types/icons';
 
-const MoonIcon: React.FC<IconType> = ({ size, color }) => (
+const MoonIcon: React.FC<IconType> = ({ size, color, className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className="header-icon-svgs"
+    className={className}
     width={size ? size : 24}
     height={size ? size : 24}
     viewBox="0 0 24 24"
