@@ -3,6 +3,7 @@ import { StatsWidgetCard } from './StatsCard';
 import {
   BankIcon,
   BurgerIcon,
+  CaseIcon,
   DownloadIcon,
   MailIcon,
   NavigatorIcon,
@@ -30,7 +31,7 @@ const stats = [
   },
   {
     id: 3,
-    name: 'Avg. Click Rate',
+    name: 'Сред. Открытие запрос',
     stat: '24.57%',
     icon: NavigatorIcon,
     change: '3.2%',
@@ -38,9 +39,9 @@ const stats = [
   },
   {
     id: 4,
-    name: 'Avg. Click Rate',
+    name: 'Сред. Решение запрос',
     stat: '24.57%',
-    icon: BankIcon,
+    icon: CaseIcon,
     change: '3.2%',
     changeType: 'decrease',
   },

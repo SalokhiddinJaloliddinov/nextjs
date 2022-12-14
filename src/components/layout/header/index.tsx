@@ -29,7 +29,6 @@ const MainHeader = () => {
     <Disclosure as="header" className={`${styles.shadow} bg-white`}>
       {({ open }) => (
         <>
-          <Meta title={'Service Desk'} />
           <div className="px-2 sm:px-4 lg:divide-y lg:divide-gray-200">
             <div className="relative h-16 flex justify-between lg:px-32">
               <div className="relative z-10 px-2 flex lg:px-0">

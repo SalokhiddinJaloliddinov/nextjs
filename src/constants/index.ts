@@ -1,55 +1,21 @@
 import {
-  BankIcon,
-  FileIcon,
-  HomeIcon,
-  IncidentIcon,
-  NavigatorIcon,
-  UserIcon,
-} from 'src/components/icons';
+  MENU_ITEM_BANK,
+  MENU_ITEM_DASHBOARD,
+  MENU_ITEM_INCIDENTS,
+  MENU_ITEM_LOCATIONS,
+  MENU_ITEM_RAPORTS,
+  MENU_ITEM_USERS,
+  MENU_ITEM_WORK,
+} from './menu';
 
 export const NAVIGATION_LINKS = [
-  {
-    name: 'Дашборд',
-    icon: HomeIcon,
-    href: '/',
-    drop: false,
-    current: true,
-  },
-  {
-    name: 'Расположения',
-    icon: NavigatorIcon,
-    href: '/test',
-    drop: false,
-    current: false,
-  },
-  {
-    name: 'Пользователи',
-    icon: UserIcon,
-    href: '/users',
-    drop: false,
-    current: false,
-  },
-  {
-    name: 'Банк',
-    icon: BankIcon,
-    href: '/bank',
-    drop: true,
-    current: false,
-  },
-  {
-    name: 'Рапорты',
-    icon: FileIcon,
-    href: '/bank',
-    drop: true,
-    current: false,
-  },
-  {
-    name: 'Инциденты',
-    icon: IncidentIcon,
-    href: '/bank',
-    drop: true,
-    current: false,
-  },
+  MENU_ITEM_DASHBOARD,
+  MENU_ITEM_WORK,
+  MENU_ITEM_INCIDENTS,
+  MENU_ITEM_RAPORTS,
+  MENU_ITEM_USERS,
+  MENU_ITEM_BANK,
+  MENU_ITEM_LOCATIONS,
 ];
 
 export const USER_NAVIGATIONS = [

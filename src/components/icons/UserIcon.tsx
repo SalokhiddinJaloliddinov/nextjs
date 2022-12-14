@@ -1,16 +1,15 @@
-import React from "react";
-import { IconType } from "src/utils/types/icons";
+import React from 'react';
+import { IconType } from 'src/utils/types/icons';
 
-export const UserIcon: React.FC<IconType> = ({ size, color }) => {
+export const UserIcon: React.FC<IconType> = ({ size, color, className }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
       viewBox="0 0 24 24"
       height={size}
-      fill={color}
-    >
-      <path fill="none" d="M0 0h24v24H0z" />
-      <path d="M4 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H4zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z" />
+      fill={color}>
+      <path d="M15.71 12.71a6 6 0 10-7.42 0 10 10 0 00-6.22 8.18 1 1 0 002 .22 8 8 0 0115.9 0 1 1 0 001 .89h.11a1 1 0 00.88-1.1 10 10 0 00-6.25-8.19zM12 12a4 4 0 114-4 4 4 0 01-4 4z"></path>
     </svg>
   );
 };
